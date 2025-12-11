@@ -16,6 +16,7 @@ export default function InstallPWA() {
       navigator.standalone
     ) {
       setIsInstalled(true);
+      return;
     }
 
     const handler = (e: Event) => {
@@ -36,8 +37,13 @@ export default function InstallPWA() {
 
       deferredPrompt.userChoice.then((choiceResult: { outcome: string }) => {
         if (choiceResult.outcome === "accepted") {
+          console.log("User accepted the install prompt.");
+          setIsInstalled(true);
         } else {
+          console.log("User dismissed the install prompt.");
+          setIsInstalled(true);
         }
+
         setDeferredPrompt(null);
       });
     }
@@ -47,7 +53,7 @@ export default function InstallPWA() {
     return (
       <SidebarMenuItem className="list-none">
         <SidebarMenuButton
-          className={cn("cursor-pointer bg-primary-500 text-white")}
+          className={cn("cursor-pointer bg-primary-100 text-primary-500")}
           onClick={handleInstallClick}
           asChild
           tooltip={"Install App"}

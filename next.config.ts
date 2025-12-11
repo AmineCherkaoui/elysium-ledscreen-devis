@@ -4,21 +4,13 @@ import type { NextConfig } from "next";
 const withPWA = withPWAInit({
   dest: "public",
   register: true,
-
-  cacheStartUrl: false,
-  cacheOnFrontEndNav: false,
-  aggressiveFrontEndNavCaching: false,
-
   workboxOptions: {
     disableDevLogs: true,
-    runtimeCaching: [
-      {
-        urlPattern: ({ url }) => true,
-        handler: "NetworkOnly",
-        options: {
-          cacheName: "network-only-cache",
-        },
-      },
+    babelPresetEnvTargets: [
+      "chrome >= 100",
+      "firefox >= 100",
+      "safari >= 15",
+      "edge >= 100",
     ],
   },
 });
