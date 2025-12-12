@@ -6,12 +6,6 @@ const withPWA = withPWAInit({
   register: true,
   workboxOptions: {
     disableDevLogs: true,
-    babelPresetEnvTargets: [
-      "chrome >= 100",
-      "firefox >= 100",
-      "safari >= 15",
-      "edge >= 100",
-    ],
   },
 });
 
@@ -32,7 +26,7 @@ const nextConfig: NextConfig = {
           ? "https"
           : "http",
         hostname: new URL(
-          process.env.NEXT_PUBLIC_BACKEND_URL || "http://127.0.0.1:8000/"
+          process.env.NEXT_PUBLIC_BACKEND_URL || "http://127.0.0.1:8000"
         ).hostname,
       },
     ],
