@@ -15,7 +15,7 @@ export function SiteHeader() {
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
-        <div className="flex justify-between items-center gap-4">
+        <div className="flex justify-between items-center gap-4 w-full">
           <h1 className="text-base font-bold">{title}</h1>
           <InstallPWA />
         </div>
