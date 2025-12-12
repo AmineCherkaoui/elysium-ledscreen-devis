@@ -60,7 +60,7 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "any",
       },
     ],
-    start_url: "/",
+    start_url: "/sys_dashboard",
     display: "standalone",
     background_color: "#fffff7",
     theme_color: "#e05d38",
