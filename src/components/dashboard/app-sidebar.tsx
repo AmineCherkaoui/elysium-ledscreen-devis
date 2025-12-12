@@ -16,7 +16,6 @@ import { adminSideBarItems } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentProps } from "react";
-import InstallPWA from "../pwa-install";
 
 type AppSidebarType = {} & ComponentProps<typeof Sidebar>;
 
@@ -49,7 +48,6 @@ export function AppSidebar({ ...props }: AppSidebarType) {
         <NavMain items={adminSideBarItems} />
       </SidebarContent>
       <SidebarFooter>
-        <InstallPWA />
         <NavUser />
       </SidebarFooter>
     </Sidebar>

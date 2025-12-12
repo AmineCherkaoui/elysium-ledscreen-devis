@@ -2,6 +2,7 @@
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { useHeaderTitle } from "@/context/adminHeaderContext";
+import InstallPWA from "../pwa-install";
 
 export function SiteHeader() {
   const title = useHeaderTitle()!.title;
@@ -14,7 +15,10 @@ export function SiteHeader() {
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
-        <h1 className="text-base font-bold">{title}</h1>
+        <div className="flex justify-between items-center gap-4">
+          <h1 className="text-base font-bold">{title}</h1>
+          <InstallPWA />
+        </div>
       </div>
     </header>
   );

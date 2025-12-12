@@ -37,11 +37,9 @@ export default function InstallPWA() {
 
       deferredPrompt.userChoice.then((choiceResult: { outcome: string }) => {
         if (choiceResult.outcome === "accepted") {
-          console.log("User accepted the install prompt.");
           setIsInstalled(true);
         } else {
-          console.log("User dismissed the install prompt.");
-          setIsInstalled(true);
+          setIsInstalled(false);
         }
 
         setDeferredPrompt(null);
@@ -60,7 +58,6 @@ export default function InstallPWA() {
         >
           <div className="flex items-center gap-2">
             <IconDownload />
-            <span>Install App</span>
           </div>
         </SidebarMenuButton>
       </SidebarMenuItem>

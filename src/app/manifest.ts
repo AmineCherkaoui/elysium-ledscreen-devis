@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "LEDSCREEN | ELYSIUM",
+    name: "Écrans LED | ELYSIUM",
     short_name: "ELYSIUM",
     icons: [
       {
@@ -60,7 +60,7 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "any",
       },
     ],
-    start_url: "/sys_dashboard",
+    start_url: "/",
     display: "standalone",
     background_color: "#fffff7",
     theme_color: "#e05d38",
